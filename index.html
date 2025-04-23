@@ -5,20 +5,64 @@
   <meta charset="UTF-8">
   <title>Thermodynamics MCQ Quiz</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    .question { margin-bottom: 20px; }
-    .feedback { font-weight: bold; margin-top: 5px; }
-    button { margin-right: 10px; margin-top: 5px; }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 800px;
+      background: #ffffff;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .question {
+      margin-bottom: 25px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+    }
+    .question p {
+      font-weight: bold;
+      color: #444;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      margin-right: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 8px;
+    }
   </style>
   <script>
     function checkAnswer(correct, selected, el) {
-      el.textContent = selected === correct ? 'Correct!' : 'Wrong!';
+      el.textContent = selected === correct ? '✅ Correct!' : '❌ Wrong!';
       el.style.color = selected === correct ? 'green' : 'red';
     }
   </script>
 </head>
 <body>
-  <h1>Thermodynamics MCQ Quiz</h1>
+  <div class="container">
+    <h1>Thermodynamics MCQ Quiz</h1>
+    <!-- Quiz questions will be inserted here -->
+<h1>Thermodynamics MCQ Quiz</h1>
   <div class='question'><p>1. For maximum range of a projectile, the angle of projection should be:</p><div><button onclick="checkAnswer('45°', '90°', document.getElementById('f1'))">90°</button><button onclick="checkAnswer('45°', '45°', document.getElementById('f1'))">45°</button></div><div class='feedback' id='f1'></div></div>
 <div class='question'><p>2. Rate of doing work is called:</p><div><button onclick="checkAnswer('Power', 'Energy', document.getElementById('f2'))">Energy</button><button onclick="checkAnswer('Power', 'Power', document.getElementById('f2'))">Power</button></div><div class='feedback' id='f2'></div></div>
 <div class='question'><p>3. Heat does not spontaneously flow from a colder body to a hotter one:</p><div><button onclick="checkAnswer('Second law of thermodynamics', 'Zeroth law of thermodynamics', document.getElementById('f3'))">Zeroth law of thermodynamics</button><button onclick="checkAnswer('Second law of thermodynamics', 'Second law of thermodynamics', document.getElementById('f3'))">Second law of thermodynamics</button></div><div class='feedback' id='f3'></div></div>
@@ -74,6 +118,6 @@
 <div class='question'><p>53. Path function:</p><div><button onclick="checkAnswer('Depends on path followed', 'Depends on path followed', document.getElementById('f53'))">Depends on path followed</button><button onclick="checkAnswer('Depends on path followed', 'Depends on end state', document.getElementById('f53'))">Depends on end state</button></div><div class='feedback' id='f53'></div></div>
 <div class='question'><p>54. Specific heat capacity:</p><div><button onclick="checkAnswer('Heat to raise 1kg by 1°C', 'Heat to raise 1kg by 1°C', document.getElementById('f54'))">Heat to raise 1kg by 1°C</button><button onclick="checkAnswer('Heat to raise 1kg by 1°C', 'Enthalpy', document.getElementById('f54'))">Enthalpy</button></div><div class='feedback' id='f54'></div></div>
 <div class='question'><p>55. Enthalpy change in adiabatic ideal gas:</p><div><button onclick="checkAnswer('mCv(T2 - T1)', 'mCv(T2 - T1)', document.getElementById('f55'))">mCv(T2 - T1)</button><button onclick="checkAnswer('mCv(T2 - T1)', 'mCp(T2 - T1)', document.getElementById('f55'))">mCp(T2 - T1)</button></div><div class='feedback' id='f55'></div></div>
-
+</div>
 </body>
 </html>
